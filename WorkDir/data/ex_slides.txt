@@ -1,0 +1,48 @@
+Petri Purho|data/slides/slide_1.jpg
+Unemployed|data/slides/slide_2.jpeg
+Programmer|data/slides/slide_3.jpg
+Game Designerish|data/slides/slide_4.jpg
+Magic|data/slides/slide_5.jpg
+Crayon Physics Deluxe|data/slides/slide_6.jpg
+Prototyping for Game Design|data/slides/slide_7.jpg
+Game Design|data/slides/slide_8.jpg
+Bullshit|data/slides/slide_9.jpg
+Hands Dirty|data/slides/slide_10.jpg
+Prototyping|data/slides/slide_11.png
+What is a Prototype?|data/slides/slide_12.jpg
+Almost a real game|data/extra_slides/full_game_prototype.jpg
+Hack in photoshop|data/extra_slides/art_prototype_01.png
+Hack in photoshop|data/extra_slides/art_prototype_02.png
+Code prototype|data/extra_slides/programming_prototype_01.png
+Code prototype|data/extra_slides/programming_prototype_02.png
+Programmed Art Prototype|data/extra_slides/programming_art_prototype.png
+Paper Prototype|data/extra_slides/paper_prototype.png
+How I see Prototyping|data/extra_slides/how_i_see_games.jpg
+1. Working on a big game|data/slides/slide_14.JPG
+2. Trying to figure out the big game to work on|data/slides/slide_15.jpg
+3. Learning to do game design|data/slides/slide_16.jpg
+Why would you do a prototype?|data/slides/slide_17.gif
+Interactivity|data/slides/slide_18.jpg
+Document vs. Prototype|data/extra_slides/doc_vs_proto_1.jpg
+Document vs. Prototype|data/extra_slides/doc_vs_proto_2.jpg
+Document vs. Prototype|data/extra_slides/doc_vs_proto_3.jpg
+Document vs. Prototype|data/extra_slides/doc_vs_proto_4.jpg
+Document vs. Prototype|data/extra_slides/doc_vs_proto_5.jpg
+Answer A question|data/slides/slide_19.jpg
+Surprise Awesomeness|data/slides/slide_20.jpg
+Unforeseen nastiness|data/slides/slide_21.jpg
+Inspire|data/slides/slide_22.jpg
+Learn stuff|data/slides/slide_23.jpg
+What makes a good prototype?|data/slides/slide_24.jpg
+What you've learned from it / time spent on it|data/slides/slide_25.jpeg
+How to do prototyping|data/slides/slide_26.jpg
+How to draw an owl|data/extra_slides/how_to_draw_01.png
+How to draw an owl|data/extra_slides/how_to_draw_02.png
+Step 1: Announcement|data/slides/slide_27.jpg
+Step 2: Idea|data/slides/slide_28.jpg
+Step 3: The Toy|data/slides/slide_29.jpg
+Step 4: Re-evaluate your idea|data/slides/slide_30.jpg
+Step 5: Crunch it|data/slides/slide_31.jpg
+Step 6: Release it|data/slides/slide_32.jpg
+Step 7: Feedback|data/slides/slide_33.png
+Goto 10|data/slides/slide_34.jpg

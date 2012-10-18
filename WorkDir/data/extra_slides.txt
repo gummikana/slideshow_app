@@ -1,0 +1,11 @@
+Hack in photoshop|data/extra_slides/art_prototype_01.png
+Hack in photoshop|data/extra_slides/art_prototype_02.png
+Code prototype|data/extra_slides/programming_prototype_01.png
+Code prototype|data/extra_slides/programming_prototype_02.png
+Programmed Art Prototype|data/extra_slides/programming_art_prototype.png
+Paper Prototype|data/extra_slides/paper_prototype.png
+How I see Prototyping|data/extra_slides/how_i_see_games.jpg
+
+
+How to draw an owl|data/extra_slides/how_to_draw_01.png
+How to draw an owl|data/extra_slides/how_to_draw_02.png
