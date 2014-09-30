@@ -16,7 +16,7 @@ SlideShowApp::SlideShowApp() :
 	mCurrentSlide( NULL ),
 	mSlides(),
 	mSlidePosition( 0 ),
-	mSaveSlides( true )
+	mSaveSlides( false )
 {
 }
 
@@ -44,7 +44,12 @@ void SlideShowApp::Init()
 			std::getline( file_input, line );
 			std::vector< std::string > lines = ceng::Split( "|", line );
 			if( lines.size() >= 2 ) 
+			{
+				lines[0] = ceng::RemoveWhiteSpaceAndEndings( lines[0] );
+				lines[1] = ceng::RemoveWhiteSpaceAndEndings( lines[1] );
+				if( lines[0] == "---" ) lines[0] = "";
 				mSlides.push_back( std::make_pair( lines[ 0 ], lines[ 1 ] ) );
+			}
 		}
 
 		file_input.close();
@@ -61,6 +66,8 @@ void SlideShowApp::CreateSlide()
 	std::string image_file = mSlides[ this->mSlidePosition ].second;
 	as::Sprite* new_slide = CreateASlide( title_text, image_file );
 
+	bool tween_text = true;
+
 	// just create a new slide, no tweening
 	if( mSaveSlides ) 
 	{
@@ -76,15 +83,36 @@ void SlideShowApp::CreateSlide()
 			GTweenSpriteAlphaTo( mCurrentSlide, 0, 0.2f, ceng::easing::Cubic::easeOut );
 			KillSpriteSlowly( mCurrentSlide, 0.5f );
 			mCurrentSlide = NULL;
+			if( mCurrentText == title_text )
+				tween_text = false;
 		}
 
 		if( new_slide ) {
 			mCurrentSlide = new_slide;
+			mCurrentText = title_text;
 			mContainer->addChild( new_slide );
 			
 			new_slide->SetAlpha( 0 );
 			GTween* t = GTweenSpriteAlphaTo( new_slide, 1.f, 0.2f, ceng::easing::Cubic::easeOut );
 			t->SetDelay( 0.2f );
+
+			as::Sprite* text_container = new_slide->GetChildByName( "text_container" );
+			if( tween_text && text_container )
+			{
+				text_container->SetAlpha( 0.f );
+				t = GTweenSpriteAlphaTo( text_container, 1.f, 0.3f, ceng::easing::Cubic::easeOut );
+				t->SetDelay( 0.2f );
+
+				types::vector2 pos = text_container->GetPos();
+				text_container->MoveTo( pos + types::vector2( 0, 50.f ) );
+				t = GTweenSpriteTo( text_container, pos, 0.3f, ceng::easing::Cubic::easeOut );
+				t->SetDelay( 0.2f );
+				
+				/*float scale = text_container->GetScaleX();
+				text_container->SetScaleY( 0.f );
+				t = GTweenSpriteScaleTo( text_container, types::vector2( scale, scale ), 0.2f, ceng::easing::Cubic::easeOut );
+				t->SetDelay( 0.2f );*/
+			}
 		}
 	}
 
@@ -155,6 +183,7 @@ as::Sprite* SlideShowApp::CreateASlide( const std::string& title_text, const std
 	text_container->MoveTo( types::vector2( 1024.f / 18.f, ( 768.f / 12.f ) * 9.f ) );
 	// text_container->SetRotation( 0.2f );
 	
+	text_container->SetName( "text_container" );
 	result->addChild( text_container );
 	return result;
 }

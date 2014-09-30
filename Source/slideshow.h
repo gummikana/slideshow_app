@@ -38,6 +38,7 @@ public:
 
 	as::Sprite* mContainer;
 	as::Sprite*	mCurrentSlide;
+	std::string mCurrentText;
 
 	std::vector< std::pair< std::string, std::string > > mSlides;
 	int mSlidePosition;
